@@ -56,6 +56,11 @@ Remove all unused containers, networks, images (both dangling and unreferenced),
 ```docker
     docker system prune
 ```
+
+Remove all unused volumes
+```docker
+    docker volume prune
+```
 Remove all containers, networks, containers and volume:
 ```docker
     docker system prune -af
