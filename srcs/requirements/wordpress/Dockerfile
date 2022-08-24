@@ -3,7 +3,7 @@ FROM debian:buster
 RUN apt-get update && apt-get install -y \
 	wget \
     php \
-    php-fpm \
+    php7.3-fpm \
     php-mysql
 
 EXPOSE  9000

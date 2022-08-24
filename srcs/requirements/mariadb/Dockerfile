@@ -11,6 +11,8 @@ COPY conf/exec.sh ./
 
 RUN ["/usr/bin/install" , "-m", "755", "-o", "mysql", "-g", "root", "-d", "/var/run/mysqld"]
 
+RUN  mysql_install_db
+
 CMD chmod +x ./exec.sh
 
 EXPOSE 3306
