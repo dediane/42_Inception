@@ -1,8 +1,10 @@
 FROM debian:buster
 
-RUN apt-get update && apt-get install -y mariadb-server 
+RUN apt-get update && apt-get install -y \
+    mariadb-server \
+    mariadb-client
 
-COPY conf/my.cnf /root/my.cnf
+COPY conf/my.cnf /root/.my.cnf
 
 RUN mkdir /usr/share/mariadb
 WORKDIR /usr/share/mariadb
