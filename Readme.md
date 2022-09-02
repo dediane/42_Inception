@@ -80,3 +80,16 @@ Run the nginx container:
 # Usefull link
 
 https://mariadb.com/kb/en/creating-a-custom-docker-image/
+
+
+
+# Run docker without sudo
+```docker
+sudo usermod -aG docker ${USER}
+
+```
+
+```docker
+su -${USER}
+
+```
