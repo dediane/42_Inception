@@ -1,3 +1,13 @@
+# Create new user 
+```bash
+sudo adduser login
+```
+```bash
+sudo usermod -aG sudo login
+```
+```bash
+sudo usermod -aG docker login
+```
 # Basic Docker commands:
 
 List running container:
@@ -106,3 +116,28 @@ mkdir -p /var/run/mysqld
 chown mysql:mysql /var/run/mysqld
 
 ```
+
+# Show db and tables
+To connect to mysql remotely using your database user:
+```bash
+mysql -h 127.0.0.1 -u wp -p (password: wp42)
+```
+
+To show that the database is not empty:
+```bash
+show databases;
+```
+```bash
+use wordpress;
+```
+
+```bash
+show tables;
+```
+
+Show comments
+```mysql
+SELECT * FROM wp_comments
+```
+
+Then you need to connect as admin to your wp website and approuve the comments or they won't appears at restart etc...
