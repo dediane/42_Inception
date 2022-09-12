@@ -10,6 +10,11 @@ Ssh into a container:
     docker exec -it <container name> /bin/sh
 ```
 
+Run container with interactive shell:
+```docker
+    docker run -it wp
+```
+
 Build a Docker image from a Dockerfile
 ```docker
     docker build -t image_name .
@@ -91,5 +96,13 @@ sudo usermod -aG docker ${USER}
 
 ```docker
 su -${USER}
+
+```
+
+# if this error -> "ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)"
+
+```bash
+mkdir -p /var/run/mysqld
+chown mysql:mysql /var/run/mysqld
 
 ```

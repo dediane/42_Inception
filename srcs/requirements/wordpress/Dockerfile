@@ -17,4 +17,5 @@ COPY    tools/wp-config.php ./
 COPY    tools/configure.sh ./
 RUN     chmod +x ./configure.sh
 
+#ENTRYPOINT 
 ENTRYPOINT ./configure.sh
