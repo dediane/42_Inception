@@ -128,7 +128,8 @@ su -${USER}
 
 ```
 
-# if this error -> "ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)"
+# if this error -> 
+### "ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)"
 
 ```bash
 mkdir -p /var/run/mysqld
