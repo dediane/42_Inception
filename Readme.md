@@ -29,32 +29,32 @@ sudo usermod -aG docker login
 ```
 # Basic Docker commands:
 
-List running container:
+### List running container:
 ```docker
     docker ps
 ```
 
-Ssh into a container:
+### Ssh into a container:
 ```docker
     docker exec -it <container name> /bin/sh
 ```
 
-Run container with interactive shell:
+### Run container with interactive shell:
 ```docker
     docker run -it wp
 ```
 
-Build a Docker image from a Dockerfile
+### Build a Docker image from a Dockerfile
 ```docker
     docker build -t image_name .
 ```
 
-Run a Docker container
+### Run a Docker container
 ```docker
     docker run image_name
 ```
 
-Check docker daemon disk space usage
+### Check docker daemon disk space usage
 ```docker
     docker system df
 ```
@@ -65,49 +65,49 @@ List networks:
     docker network ls
 ```
 
-Connects a container to a network:
+### Connects a container to a network:
 ```docker
     docker network connect <network> <container>
 ```
 
-Disconnect a container from a network:
+### Disconnect a container from a network:
 ```docker
     docker network disconnect <network> <container>
 ```
 
 # Clean Docker:
-Remove all images:
+### Remove all images:
 ```docker
     docker rmi $(docker images)
 ```
 
-Destroy all containers:
+### Destroy all containers:
 ```docker
     docker rm $(docker ps -a)
 ```
 
-Remove all unused containers, networks, images (both dangling and unreferenced), and optionally, volumes.
+### Remove all unused containers, networks, images (both dangling and unreferenced), and optionally, volumes.
 ```docker
     docker system prune
 ```
 
-Remove all unused volumes
+### Remove all unused volumes
 ```docker
     docker volume prune
 ```
-Remove all containers, networks, containers and volume:
+### Remove all containers, networks, containers and volume:
 ```docker
     docker system prune -af
 ```
 
 # Run nginx container separatl:
 
-Build the container with: 
+### Build the container with: 
 ```docker
     docker build -t image_name .
 ```
 
-Run the nginx container:
+### Run the nginx container:
 ```docker
     docker run --name [nameofyourcontainer] -p 80:80 -d [nameofyourimage]
 ```
@@ -137,12 +137,12 @@ chown mysql:mysql /var/run/mysqld
 ```
 
 # Show db and tables
-To connect to mysql remotely using your database user:
+### To connect to mysql remotely using your database user:
 ```bash
 mysql -h 127.0.0.1 -u wp -p (password: wp42)
 ```
 
-To show that the database is not empty:
+### To show that the database is not empty:
 ```bash
 show databases;
 ```
@@ -154,7 +154,7 @@ use wordpress;
 show tables;
 ```
 
-Show comments
+### Show comments
 ```mysql
 SELECT * FROM wp_comments
 ```
