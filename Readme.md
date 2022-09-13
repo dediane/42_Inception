@@ -5,6 +5,16 @@ Docker-compose is used to manage a multi-container application. It works like a 
 
 A docker container image is a lightweight, sandlestone exectutable package of software that includes everything needed to run an application.
 
+The key difference between the docker Dockerfile and docker-compose is that the docker Dockerfile describes how to build Docker images, while docker-compose is used to run Docker containers.
+
+# Difference between Vm and Docker
+
+Virtual machines have host OS and the guest OS inside each VM. Guest OS can be any OS, like Linux or Windows, irrespective of host OS.
+Virtual machines are needed if the applications or services required to run on different OS. 
+
+Docker containers host on a single physical server with a host OS, which shares among them. Sharing the host OS between containers makes them light and increases the boot time. 
+Docker containers are considered suitable to run multiple applications over a single OS kernel.
+
 ![](https://cloudacademy.com/wp-content/uploads/2019/10/Docker-vs..png)
 
 # Create new user 
