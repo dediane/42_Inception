@@ -1,3 +1,12 @@
+# About Docker and Docker-compose
+
+Docker is used to manage individual container on the docker engine.
+Docker-compose is used to manage a multi-container application. It works like a "script" on top of Docker.
+
+A docker container image is a lightweight, sandlestone exectutable package of software that includes everything needed to run an application.
+
+![](https://cloudacademy.com/wp-content/uploads/2019/10/Docker-vs..png)
+
 # Create new user 
 ```bash
 sudo adduser login
