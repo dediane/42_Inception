@@ -6,6 +6,7 @@ down:
 	
 clean:
 	docker system prune -af
+
 re:
 	cd srcs && docker-compose up --build
 hosts:

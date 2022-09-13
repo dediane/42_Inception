@@ -7,7 +7,6 @@ fi
 if [ $? -ne 0 ] || [ ! -d /var/lib/mysql/wordpress ]; then
     echo "Need to config wordpress DB"
     killall mysqld
-    rm -rf /var/lib/mysql/*
     mysql_install_db &> /dev/null;
     service mysql start 2> /dev/null;
 

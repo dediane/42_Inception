@@ -163,7 +163,19 @@ show tables;
 
 ### Show comments
 ```mysql
-SELECT * FROM wp_comments
+SELECT * FROM wp_comments;
 ```
 
 Then you need to connect as admin to your wp website and approuve the comments or they won't appears at restart etc...
+
+# Setup VM
+
+### Before starting make sure to stop nginx and mysql service running on the VM:
+
+```
+sudo service nginx stop
+```
+
+```
+sudo service mysql stop
+```

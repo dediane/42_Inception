@@ -1,8 +1,6 @@
 #!/bin/bash
 
-#while ! mariadb -h$WP_DBHOST -u$MYSQL_USER -p$MYSQL_PASSWORD $MYSQL_DATABASE &> /dev/null; do
-#    sleep 5;
-#done
+sleep 20
 
 if [ ! -f /run/php/ ]; then
     mkdir /run/php/ 2>/dev/null
@@ -24,9 +22,6 @@ if [ ! -f /var/www/html/wp-config.php ]; then
 
     echo "WP admin user = $WP_ADMIN"
     echo "WP password for admin user = $WP_ADMIN_PWD"
-
-    #wp config create --allow-root --dbname=$MYSQL_DATABASE --dbuser=$MYSQL_USER --dbpass=$MYSQL_PASSWORD --dbhost=$WP_DBHOST --dbcharset="utf8" --dbcollate="utf8_general_ci"
-
     echo "Wordpress installed & configured with Mariadb"
 
 fi
