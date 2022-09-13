@@ -17,6 +17,7 @@ Docker containers are considered suitable to run multiple applications over a si
 
 ![](https://cloudacademy.com/wp-content/uploads/2019/10/Docker-vs..png)
 
+
 # Create new user 
 ```bash
 sudo adduser login
@@ -135,6 +136,11 @@ su -${USER}
 mkdir -p /var/run/mysqld
 chown mysql:mysql /var/run/mysqld
 
+```
+
+If it doesn't fix anything, rebuild a new vm and do:
+```bash
+sudo service mysql stop
 ```
 
 # Show db and tables
