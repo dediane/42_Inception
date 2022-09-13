@@ -7,7 +7,7 @@ if [ ! -f /run/php/ ]; then
 fi
 cd /var/www/html
 
-if [ ! -f /var/www/html/wp-config.php ]; then 
+if [ ! -f /var/www/html/test.sh ]; then 
     cp  /usr/share/wordpress/wp-config.php ./wp-config.php
     sed -i "s/MYSQL_USER/$MYSQL_USER/g" ./wp-config.php && \
     sed -i "s/MYSQL_PASSWORD/$MYSQL_PASSWORD/g" ./wp-config.php && \
@@ -18,11 +18,16 @@ if [ ! -f /var/www/html/wp-config.php ]; then
     chmod +x wp-cli.phar
     mv wp-cli.phar /usr/local/bin/wp
     wp core download --allow-root
+    
     wp core install --allow-root --url="$WP_URL" --title="$WP_TITLE" --admin_user="$WP_ADMIN" --admin_password="$WP_ADMIN_PWD" --admin_email="$WP_ADMIN_EMAIL" --skip-email
-
     echo "WP admin user = $WP_ADMIN"
     echo "WP password for admin user = $WP_ADMIN_PWD"
+
+    wp user create $WP_USER $WP_USER_EMAIL  --user_pass=$WP_USER_PWD --role=author --allow-root
+    echo "WP user created, login=$WP_USER & password=$WP_USER_PWD"
+
     echo "Wordpress installed & configured with Mariadb"
+    touch test.sh
 
 fi
 
