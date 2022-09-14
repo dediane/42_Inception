@@ -31,5 +31,6 @@ if [ ! -f /var/www/html/test.sh ]; then
 
 fi
 
+echo "Wordpress ready"
 #start php
 php-fpm7.3 --nodaemonize

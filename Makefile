@@ -1,6 +1,7 @@
-all:
-	cd srcs && docker-compose up
+all: up
 
+up:
+	cd srcs && docker-compose up
 down:
 	cd srcs && docker-compose down
 	
@@ -9,5 +10,3 @@ clean:
 
 re:
 	cd srcs && docker-compose up --build
-hosts:
-	echo "127.0.0.1 ddecourt.42.fr" >> /etc/hosts 
